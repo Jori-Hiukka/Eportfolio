@@ -1,0 +1,171 @@
+/* 3 Lisää tyyli kaikkiin elementteihin */
+
+* {
+
+    box-sizing:border-box;
+  
+    margin: 0;
+  
+    padding: 0;
+  
+  }
+  
+   
+  
+  /* 5 */
+  
+  body {
+  
+    font-size: 1.2rem;
+  
+    min-height: 100%;
+  
+  }
+  
+  /* 6 html:n leveys */
+  
+  html {
+  
+    height: 100%;
+  
+  }
+  
+   
+  
+  /* 4 lisää grid-container luokka */
+  
+  .grid-container > * {
+  
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  
+    border-radius: 4px;
+  
+    padding: 10px;
+  
+    text-align: center;
+  
+  }
+  
+    /* 8 header, navbar, sidebar, main tyylit*/
+  
+  .header{
+  
+    grid-area: header;
+  
+    background-color: #858585;
+  
+  }
+  
+  .navbar{
+  
+    grid-area: navbar;
+  
+    background-color: #afd6af;
+  
+  }
+  
+  .sidebar{
+  
+    grid-area: sidebar;
+  
+    background-color: #fdcdcd;
+  
+  }
+  
+  .main{
+  
+    grid-area: main;
+  
+    background-color: whitesmoke;
+  
+  }
+  
+  footer{
+  
+    grid-area: footer;
+  
+    background-color: blanchedalmond;
+  
+  }
+  
+   
+  
+  /* 5 display grid , 7 grid-template-areas*/
+  
+  @media(min-width: 600px){
+  
+  .grid-container{
+  
+    display: grid;
+  
+    gap: 5px;
+  
+    grid-template-areas:    
+  
+      "header"
+  
+      "navbar"
+  
+      "main"
+  
+      "sidebar"
+  
+      "footer";
+  
+    }
+  
+  }
+  
+   
+  
+  /* 9 mediakysely */
+  
+  @media(min-width: 900px){
+  
+    .grid-container{
+  
+   
+  
+  /* taikaa, tee näin eka luku on korkeus, toka leveys */
+  
+    grid-template:  
+  
+    "header header" 100px
+  
+    "navbar navbar" 100px
+  
+    "sidebar main" auto
+  
+    "footer footer" 100px /
+  
+    200px   auto;
+  
+    }
+  
+  }
+  
+   
+  
+  /* 9 mediakysely */
+  
+  @media(min-width: 1200px){
+  
+    .grid-container{
+  
+      grid-template:  
+  
+      "header header header" 100px
+  
+      "navbar navbar navbar" 100px
+  
+      "main main sidebar" auto
+  
+      "footer footer footer" 100px /
+  
+      200px   auto   200px;
+  
+      }
+  
+  }
+  
+   
