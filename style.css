@@ -43,6 +43,17 @@
     padding: 10px;
   
     text-align: center;
+    height:100%;
+
+    grid-template-areas:    
+  
+      "header" 100px
+  
+      "main" auto
+  
+      "sidebar" 100px
+  
+      "footer" 100px;
   
   }
   
@@ -85,9 +96,8 @@
     grid-area: footer;
   
     background-color: blanchedalmond;
-    position: fixed;
     bottom: 0;
-    max-width: screen-width;
+    max-width: 100%;
   
   }
   
@@ -99,21 +109,17 @@
   
   .grid-container{
   
-    display: grid;
-  
     gap: 5px;
   
     grid-template-areas:    
   
-      "header"
+      "header" 100px
   
-      "navbar"
+      "main" auto
   
-      "main"
+      "sidebar" 100px
   
-      "sidebar"
-  
-      "footer";
+      "footer" 100px;
   
     }
   
@@ -134,8 +140,6 @@
     grid-template:  
   
     "header header" 100px
-  
-    "navbar navbar" 100px
   
     "sidebar main" auto
   
@@ -158,8 +162,6 @@
       grid-template:  
   
       "header header header" 100px
-  
-      "navbar navbar navbar" 100px
   
       "main main sidebar" auto
   
