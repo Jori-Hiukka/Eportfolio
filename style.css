@@ -1,4 +1,4 @@
-/* 3 Lisää tyyli kaikkiin elementteihin */
+/* Lisää tyyli kaikkiin elementteihin */
 
 * {
 
@@ -22,7 +22,7 @@
   
   }
   
-  /* 6 html:n leveys */
+  /* html:n leveys */
   
   html {
   
@@ -32,7 +32,7 @@
   
    
   
-  /* 4 lisää grid-container luokka */
+  /* lisää grid-container luokka */
   
   .grid-container > * {
   
@@ -57,21 +57,23 @@
   
   }
   
-    /* 8 header, navbar, sidebar, main tyylit*/
+    /* header, navbar, sidebar, main tyylit*/
   
   .header{
   
     grid-area: header;
   
-    background-color: #858585;
+    background-color: black;
+
+    color: white;
   
   }
   
-  .navbar{
+  .navbar {
   
     grid-area: navbar;
   
-    background-color: #afd6af;
+    background-color: black;
   
   }
   
@@ -79,7 +81,7 @@
   
     grid-area: sidebar;
   
-    background-color: #fdcdcd;
+    opacity: 0;
   
   }
   
@@ -103,7 +105,7 @@
   
    
   
-  /* 5 display grid , 7 grid-template-areas*/
+  /* display grid , grid-template-areas*/
   
   @media(min-width: 600px){
   
@@ -127,7 +129,7 @@
   
    
   
-  /* 9 mediakysely */
+  /* mediakysely */
   
   @media(min-width: 900px){
   
@@ -135,11 +137,12 @@
   
    
   
-  /* taikaa, tee näin eka luku on korkeus, toka leveys */
+  /* korkeudet ja leveydet, ensimmäisenä korkeus, toisena leveys */
   
     grid-template:  
   
     "header header" 100px
+    "nav nav nav" 100px
   
     "sidebar main" auto
   
@@ -153,7 +156,7 @@
   
    
   
-  /* 9 mediakysely */
+  /* mediakysely */
   
   @media(min-width: 1200px){
   
